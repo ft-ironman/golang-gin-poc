@@ -1,6 +1,6 @@
 package service
 
-import "exampleProject/entity"
+import "github.com/ft-ironman/golang-gin-poc/entity"
 
 type VideoService interface {
     Save(entity.Video) entity.Video
@@ -20,6 +20,6 @@ func (service *videoService) Save(video entity.Video) entity.Video {
     return video
 }
 
-func (service *videoService) FindAll(entity.Video) entity.Video {
+func (service *videoService) FindAll() []entity.Video {
     return service.videos
 }

@@ -1,8 +1,8 @@
 package main
 
 import (
-    "exampleProject/controller"
-    "exampleProject/service"
+    "github.com/ft-ironman/golang-gin-poc/controller"
+    "github.com/ft-ironman/golang-gin-poc/service"
     "github.com/gin-gonic/gin"
 )
 
