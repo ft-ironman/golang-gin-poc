@@ -8,7 +8,7 @@ import (
 
 type VideoController interface {
     FindAll() []entity.Video
-    Save(context *gin.Context) entity.Video
+    Save(ctx *gin.Context) entity.Video
 }
 
 type controller struct {
@@ -22,7 +22,7 @@ func New(service service.VideoService) VideoController {
 }
 
 func (c *controller) FindAll() []entity.Video {
-    return service.FindAll()
+    return c.service.FindAll()
 }
 
 func (c *controller) Save(ctx gin.Context) entity.Video {
